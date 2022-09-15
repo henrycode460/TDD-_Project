@@ -1,11 +1,11 @@
-require_relative '../solver.rb'
+require_relative '../solver'
 
-context "Given a string" do
-    it "can reverse the string using the reverse_str method" do
-         words1 = Solver.new
-        
-         expect(words1.reverse_str('hello')).to eq('olleh')
-    end
+context 'Given a string' do
+  it 'can reverse the string using the reverse_str method' do
+    words1 = Solver.new
+
+    expect(words1.reverse_str('hello')).to eq('olleh')
+  end
 end
 
 describe Solver do
@@ -17,15 +17,14 @@ describe Solver do
     expect(@solve.factorial(4)).to eq(24)
   end
 
-  it "Testing the factorial of 0" do
+  it 'Testing the factorial of 0' do
     expect(@solve.factorial(0)).to eq(1)
   end
 
-  it "Testing the factorial of negative number" do
-    expect{@solve.factorial(-4)}.to raise_exception
+  it 'Testing the factorial of negative number' do
+    expect { @solve.factorial(-4) }.to raise_exception
   end
 end
-
 
 describe "Testing the 'fizzbuzz' method" do
   before :each do
@@ -48,4 +47,3 @@ describe "Testing the 'fizzbuzz' method" do
     expect(@test.fizzbuzz(7)).to eq('7')
   end
 end
-
