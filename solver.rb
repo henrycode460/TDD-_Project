@@ -1,7 +1,4 @@
-class Solver
-    attr_accessor :words
-   
-
+class Solver   
     def reverse_str(words)
         return words.reverse
     end
